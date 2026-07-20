@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Oyewale Oyedokun Lookman</title>
+  <meta name="description" content="Professional acting credits and details for actor and filmmaker Oyewale Oyedokun Lookman.">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Custom Design Language Styles -->
+  <style>
+    :root {
+      --bg-color: #fcf9f6;
+      --text-dark: #1c1c1a;
+      --text-secondary: #444748;
+      --accent-gold: #775a19;
+      --border-light: rgba(28, 28, 26, 0.08);
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      padding-top: 72px; /* Navbar height compensation */
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6, .display-font {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    /* Accent element */
+    .accent-eyebrow {
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: var(--accent-gold);
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Custom buttons */
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: #fcf9f6;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      padding: 1rem 2.2rem;
+      border-radius: 0;
+      border: 1px solid var(--accent-gold);
+      transition: all 0.35s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-gold:hover {
+      background-color: transparent;
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    /* Nav bar styles */
+    .navbar-custom {
+      background-color: rgba(252, 249, 246, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.2rem 0;
+      transition: all 0.3s ease;
+    }
+    .navbar-custom .navbar-brand {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      letter-spacing: 0.1em;
+    }
+    .navbar-custom .nav-link {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    .navbar-custom .nav-link:hover, 
+    .navbar-custom .nav-link.active {
+      color: var(--text-dark);
+    }
+    .navbar-custom .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent-gold);
+      transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .navbar-custom .nav-link:hover::after,
+    .navbar-custom .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Sections padding */
+    .section-padding {
+      padding: 7rem 0;
+    }
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 5rem 0;
+      }
+    }
+
+    /* Table custom styles */
+    .table-custom {
+      border-collapse: collapse;
+      width: 100%;
+      color: var(--text-dark);
+      margin-top: 1.5rem;
+    }
+    .table-custom th {
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--accent-gold);
+      border-bottom: 2px solid var(--accent-gold);
+      padding: 1.2rem 1rem;
+    }
+    .table-custom td {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      padding: 1.2rem 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .table-custom tbody tr {
+      transition: background-color 0.3s ease;
+    }
+    .table-custom tbody tr:hover {
+      background-color: rgba(119, 90, 25, 0.03);
+    }
+    .table-custom td .title-highlight {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    /* Skill and attributes styling */
+    .skill-badge {
+      background-color: transparent;
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .skill-badge:hover {
+      background-color: var(--accent-gold);
+      color: #fcf9f6;
+    }
+    .letter-spacing-1 {
+      letter-spacing: 0.1em;
+    }
+    .fs-7 {
+      font-size: 0.75rem;
+    }
+
+    /* Footer styling */
+    .footer-custom {
+      background-color: #181919;
+      color: rgba(252, 249, 246, 0.5);
+      padding: 6rem 0 3.5rem;
+    }
+    .footer-custom .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: #fcf9f6;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+    .footer-custom p {
+      color: rgba(252, 249, 246, 0.5);
+      font-size: 0.9rem;
+    }
+    .footer-custom a {
+      color: rgba(252, 249, 246, 0.5);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-custom a:hover {
+      color: #fcf9f6;
+    }
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .footer-nav a {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+    }
+    .footer-social-icons {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .footer-social-icons a {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    /* Scroll reveal transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+
+    /* Responsive Enhancements for Mobile Devices */
+    @media (max-width: 768px) {
+      .navbar-custom {
+        padding: 0.8rem 0;
+      }
+      .navbar-custom .navbar-brand {
+        font-size: 1.05rem;
+        letter-spacing: 0.05em;
+      }
+      .table-custom th, .table-custom td {
+        padding: 0.8rem 0.6rem;
+        font-size: 0.85rem;
+      }
+      .table-custom td .title-highlight {
+        font-size: 0.95rem;
+      }
+      .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .navbar-custom .navbar-brand {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+      }
+      .footer-custom .footer-brand {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body onload="initScrollReveal()">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">OYEWALE OYEDOKUN LOOKMAN</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="media.html">Media</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Resume Header Section -->
+  <section class="section-padding pb-4">
+    <div class="container text-center reveal">
+      <span class="accent-eyebrow">Curriculum Vitae</span>
+      <h1 class="display-4 mb-2">Oyewale Oyedokun Lookman</h1>
+      <p class="text-secondary max-width-600 mx-auto">Actor & Filmmaker · Lagos, Nigeria</p>
+    </div>
+  </section>
+
+  <!-- TV & Film Credits Section -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="mb-4 reveal">
+        <span class="accent-eyebrow">Screen Work</span>
+        <h2 class="display-6">Television & Film</h2>
+      </div>
+      
+      <div class="table-responsive reveal delay-1">
+        <table class="table table-custom align-middle">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 12%">Year</th>
+              <th scope="col" style="width: 25%">Title</th>
+              <th scope="col" style="width: 15%">Type</th>
+              <th scope="col" style="width: 18%">Role</th>
+              <th scope="col" style="width: 15%">Production</th>
+              <th scope="col" style="width: 15%">Director</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Current</td>
+              <td><span class="title-highlight">Threads</span></td>
+              <td>TV series</td>
+              <td>Supporting</td>
+              <td>Roome</td>
+              <td>Seun Afolabi Storyteller</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td><span class="title-highlight">My Beloved Husband</span></td>
+              <td>Feature</td>
+              <td>Supporting</td>
+              <td>Okiki</td>
+              <td>Tunde Ola Yusuf</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td><span class="title-highlight">Shoyebi</span></td>
+              <td>Feature</td>
+              <td>Lead</td>
+              <td>2OL media</td>
+              <td>Tunde Ola Yusuf</td>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td><span class="title-highlight">Ajihun</span></td>
+              <td>Feature</td>
+              <td>Supporting</td>
+              <td>TOY</td>
+              <td>Tunde Ola Yusuf</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td><span class="title-highlight">Opakan Rebirth</span></td>
+              <td>TV series</td>
+              <td>Extra</td>
+              <td>Afonja Olaniyi production</td>
+              <td>Adebayo Tijani</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><span class="title-highlight">Ejiworo</span></td>
+              <td>Feature</td>
+              <td>Extra</td>
+              <td>TOY</td>
+              <td>Tunde Ola Yusuf</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theater Credits Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="mb-4 reveal">
+        <span class="accent-eyebrow">Stage Work</span>
+        <h2 class="display-6">Theater</h2>
+      </div>
+      
+      <div class="table-responsive reveal delay-1">
+        <table class="table table-custom align-middle">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 15%">Year</th>
+              <th scope="col" style="width: 35%">Production</th>
+              <th scope="col" style="width: 25%">Role</th>
+              <th scope="col" style="width: 25%">Director</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024</td>
+              <td><span class="title-highlight">Bashorun Gaa</span></td>
+              <td>Alaafin Abiodun</td>
+              <td>Lekan Omowonuola</td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td><span class="title-highlight">Attahairu</span></td>
+              <td>Prince</td>
+              <td>Damola Mukhtar</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><span class="title-highlight">Lisabi</span></td>
+              <td>Ajele</td>
+              <td>Jeff</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><span class="title-highlight">Arugba and The White Leper</span></td>
+              <td>—</td>
+              <td>Lekan Omowonuola</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td><span class="title-highlight">Efunsetan Aniwura</span></td>
+              <td>Akinwale</td>
+              <td>Lekan Omowonuola</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td><span class="title-highlight">Moxie of Afonja</span></td>
+              <td>Baale Iwere</td>
+              <td>Asanlu</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td><span class="title-highlight">Beatification of Area Boys</span></td>
+              <td>Chief Judge</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attributes & Skills Section -->
+  <section class="section-padding border-top border-light">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Physical Stats -->
+        <div class="col-lg-6 reveal">
+          <span class="accent-eyebrow">Physical Profile</span>
+          <h3 class="h4 mb-4">Attributes</h3>
+          <div class="border border-light p-4 bg-light-subtle">
+            <div class="row g-3">
+              <div class="col-md-6 col-6">
+                <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Gender</span>
+                <span class="fw-semibold text-dark">Male</span>
+              </div>
+              <div class="col-md-6 col-6">
+                <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Height</span>
+                <span class="fw-semibold text-dark">6'0" / 183cm</span>
+              </div>
+              <div class="col-md-6 col-6">
+                <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Eyes</span>
+                <span class="fw-semibold text-dark">Black</span>
+              </div>
+              <div class="col-md-6 col-6">
+                <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Hair</span>
+                <span class="fw-semibold text-dark">Black</span>
+              </div>
+              <div class="col-12">
+                <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Appearance / Origin</span>
+                <span class="fw-semibold text-dark">Black / African</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="col-lg-6 reveal delay-1">
+          <span class="accent-eyebrow">Competencies</span>
+          <h3 class="h4 mb-4">Special Skills</h3>
+          <div class="border border-light p-4 bg-light-subtle h-100">
+            <div class="d-flex flex-wrap gap-2">
+              <span class="skill-badge">Voice-Over Narration</span>
+              <span class="skill-badge">Yoruba (Oyo)</span>
+              <span class="skill-badge">Tennis</span>
+              <span class="skill-badge">English</span>
+              <span class="skill-badge">Car (Automatic)</span>
+              <span class="skill-badge">Weight Training</span>
+              <span class="skill-badge">Voice Acting</span>
+              <span class="skill-badge">Improvisation</span>
+              <span class="skill-badge">Table Tennis</span>
+              <span class="skill-badge">Soccer</span>
+              <span class="skill-badge">Folk / Traditional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+          <div class="footer-brand">OYEWALE OYEDOKUN LOOKMAN</div>
+          <p class="m-0">&copy; 2026 Oyewale Oyedokun Lookman. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center align-items-md-end">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/oyewale_oyedokun_" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://m.imdb.com/name/nm17607125/" target="_blank" rel="noopener" aria-label="IMDb"><i class="bi bi-film"></i></a>
+            <a href="https://www.tiktok.com/@oyewaleoyedokun" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scroll Reveal JS -->
+  <script>
+    function initScrollReveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -50px 0px"
+      });
+      
+      reveals.forEach(reveal => {
+        observer.observe(reveal);
+      });
+    }
+  </script>
+</body>
+</html>

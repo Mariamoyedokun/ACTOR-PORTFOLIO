@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oyewale Oyedokun Lookman | Actor & Filmmaker</title>
+  <meta name="description" content="Official portfolio of Oyewale Oyedokun Lookman, a Nigerian actor and filmmaker known for portraying complex, morally layered characters.">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Custom Design Language Styles -->
+  <style>
+    :root {
+      --bg-color: #fcf9f6;
+      --text-dark: #1c1c1a;
+      --text-secondary: #444748;
+      --accent-gold: #775a19;
+      --border-light: rgba(28, 28, 26, 0.08);
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      padding-top: 72px; /* Navbar height compensation */
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6, .display-font {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    /* Accent element */
+    .accent-eyebrow {
+      font-family: var(--font-sans);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: var(--accent-gold);
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Custom buttons */
+    .btn-gold {
+      background-color: var(--accent-gold);
+      color: #fcf9f6;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      padding: 1rem 2.2rem;
+      border-radius: 0;
+      border: 1px solid var(--accent-gold);
+      transition: all 0.35s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-gold:hover {
+      background-color: transparent;
+      color: var(--accent-gold);
+      border-color: var(--accent-gold);
+    }
+
+    .btn-outline-gold {
+      background-color: transparent;
+      color: var(--accent-gold);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      padding: 1rem 2.2rem;
+      border-radius: 0;
+      border: 1px solid var(--accent-gold);
+      transition: all 0.35s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline-gold:hover {
+      background-color: var(--accent-gold);
+      color: #fcf9f6;
+    }
+
+    /* Nav bar styles */
+    .navbar-custom {
+      background-color: rgba(252, 249, 246, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1.2rem 0;
+      transition: all 0.3s ease;
+    }
+    .navbar-custom .navbar-brand {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      letter-spacing: 0.1em;
+    }
+    .navbar-custom .nav-link {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    .navbar-custom .nav-link:hover, 
+    .navbar-custom .nav-link.active {
+      color: var(--text-dark);
+    }
+    .navbar-custom .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent-gold);
+      transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .navbar-custom .nav-link:hover::after,
+    .navbar-custom .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      height: calc(100vh - 72px);
+      min-height: 650px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Warm dark overlay gradient */
+      background: linear-gradient(135deg, rgba(28, 28, 26, 0.95) 0%, rgba(28, 28, 26, 0.6) 60%, rgba(28, 28, 26, 0.85) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fcf9f6;
+      max-width: 850px;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 4rem; /* 64px */
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      color: #fcf9f6;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-family: var(--font-serif);
+    }
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+    }
+    .hero-subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(252, 249, 246, 0.8);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    /* Sections padding */
+    .section-padding {
+      padding: 9rem 0;
+    }
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 5.5rem 0;
+      }
+    }
+
+    /* Philosophy Section styles */
+    .philosophy-text-col {
+      padding-right: 4rem;
+    }
+    @media (max-width: 991px) {
+      .philosophy-text-col {
+        padding-right: 0.75rem;
+        margin-bottom: 4rem;
+      }
+    }
+    .portrait-frame {
+      position: relative;
+      padding: 0;
+      background: #1c1c1a;
+      overflow: hidden;
+    }
+    .portrait-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .portrait-frame:hover .portrait-image {
+      transform: scale(1.03);
+    }
+
+    /* Card styling */
+    .card-work {
+      border: none;
+      background: transparent;
+      margin-bottom: 2.5rem;
+      transition: transform 0.4s ease;
+    }
+    .card-work .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      background-color: #1c1c1a;
+      margin-bottom: 1.5rem;
+      aspect-ratio: 3 / 2;
+    }
+    .card-work img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+      display: block;
+    }
+    .card-work:hover img {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
+    .card-work .card-label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .card-work .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* Contact CTA Section */
+    .cta-section {
+      background-color: #f6f0ea;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .cta-heading {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+    @media (max-width: 768px) {
+      .cta-heading {
+        font-size: 2.2rem;
+      }
+    }
+    .cta-email {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid var(--accent-gold);
+      padding-bottom: 0.2rem;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+    }
+    .cta-email:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Social Link styles */
+    .social-links-row {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .social-link-item {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-link-item:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Footer styling */
+    .footer-custom {
+      background-color: #181919;
+      color: rgba(252, 249, 246, 0.5);
+      padding: 6rem 0 3.5rem;
+    }
+    .footer-custom .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: #fcf9f6;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+    .footer-custom p {
+      color: rgba(252, 249, 246, 0.5);
+      font-size: 0.9rem;
+    }
+    .footer-custom a {
+      color: rgba(252, 249, 246, 0.5);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .footer-custom a:hover {
+      color: #fcf9f6;
+    }
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .footer-nav a {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+    }
+    .footer-social-icons {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .footer-social-icons a {
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    /* Scroll reveal transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
+
+    /* Responsive Enhancements for Mobile Devices */
+    @media (max-width: 768px) {
+      .navbar-custom {
+        padding: 0.8rem 0;
+      }
+      .navbar-custom .navbar-brand {
+        font-size: 1.05rem;
+        letter-spacing: 0.05em;
+      }
+      .cta-heading {
+        font-size: 2.2rem;
+      }
+      .cta-email {
+        font-size: 1.35rem;
+        word-break: break-all;
+      }
+      .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .navbar-custom .navbar-brand {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+      }
+      .cta-email {
+        font-size: 1.1rem;
+      }
+      .footer-custom .footer-brand {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body onload="initScrollReveal()">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">OYEWALE OYEDOKUN LOOKMAN</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="media.html">Media</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Comment: Replace the background image placeholder URL below with a high-resolution headshot or performance photo of Oyewale Oyedokun -->
+  <section class="hero-section" style="background-image: url('Images/ACTORHERO.jpeg');">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="accent-eyebrow reveal">Actor & Filmmaker</span>
+        <h1 class="hero-title reveal delay-1">Oyewale Oyedokun Lookman</h1>
+        <p class="hero-subtitle reveal delay-2">A Nigerian actor and filmmaker known for portraying complex, morally layered characters.</p>
+        <div class="reveal delay-3">
+          <a href="media.html" class="btn-gold">View Reel</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 philosophy-text-col reveal">
+          <span class="accent-eyebrow">The Artistic Philosophy</span>
+          <h2 class="display-5 mb-4">Radical vulnerability.</h2>
+          <p class="mb-4">For me, acting is the pursuit of depth and ambiguity in human behavior. I gravitate toward roles that challenge conventional heroism, seeking to reveal the complex, morally layered dimensions of every character. I believe that performance is not about wearing a mask, but stripping it away to find truth under imaginary circumstances.</p>
+          <p class="mb-0">I am deeply committed to building a body of work that is bold, socially aware, and globally resonant. Whether collaborating on contemporary screenplays or interpreting classical texts, my objective remains constant: to challenge perspectives and craft narratives that resonate far beyond the screen.</p>
+        </div>
+        <div class="col-lg-6 reveal delay-2">
+          <div class="portrait-frame">
+            <!-- Comment: Replace the placeholder image below with a studio portrait of Oyewale Oyedokun Lookman (recommended: portrait orientation, 3:4 ratio) -->
+            <img src="Images/ACTORHERO.jpeg" alt="Oyewale Oyedokun Lookman Portrait" class="portrait-image img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Works Teaser -->
+  <section class="section-padding bg-light border-top border-bottom border-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-baseline mb-5 reveal">
+        <div>
+          <span class="accent-eyebrow">Featured Projects</span>
+          <h2 class="display-6 m-0">Selected Works</h2>
+        </div>
+        <div>
+          <a href="portfolio.html" class="social-link-item">View Full Portfolio <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-4 reveal">
+          <div class="card-work">
+            <div class="card-img-wrapper">
+              <!-- Comment: Replace the placeholder image below with a production still from Shoyebi -->
+              <img src="https://placehold.co/600x400/1c1c1a/fcf9f6?text=Shoyebi+Production+Still" alt="Shoyebi Stills" class="img-fluid">
+            </div>
+            <div class="card-label">2025 / Feature Film</div>
+            <h3 class="card-title">Shoyebi</h3>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="col-md-4 reveal delay-1">
+          <div class="card-work">
+            <div class="card-img-wrapper">
+              <!-- Comment: Replace the placeholder image below with a production still from My Beloved Husband -->
+              <img src="https://placehold.co/600x400/1c1c1a/fcf9f6?text=My+Beloved+Husband+Still" alt="My Beloved Husband Stills" class="img-fluid">
+            </div>
+            <div class="card-label">2025 / Feature Film</div>
+            <h3 class="card-title">My Beloved Husband</h3>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-md-4 reveal delay-2">
+          <div class="card-work">
+            <div class="card-img-wrapper">
+              <!-- Comment: Replace the placeholder image below with a production still from Threads -->
+              <img src="https://placehold.co/600x400/1c1c1a/fcf9f6?text=Threads+Production+Still" alt="Threads Stills" class="img-fluid">
+            </div>
+            <div class="card-label">Current / TV Series</div>
+            <h3 class="card-title">Threads</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="section-padding cta-section text-center">
+    <div class="container reveal">
+      <span class="accent-eyebrow">Collaboration</span>
+      <h2 class="cta-heading">Building meaningful narratives.</h2>
+      <div>
+        <a href="mailto:oyewaleoyedokun981@gmail.com" class="cta-email">oyewaleoyedokun981@gmail.com</a>
+      </div>
+      <div class="social-links-row">
+        <!-- Comment: Replace # with actual link to Oyewale Oyedokun's Instagram profile -->
+        <a href="https://www.instagram.com/oyewale_oyedokun_" class="social-link-item" target="_blank" rel="noopener">Instagram</a>
+        <!-- Comment: Replace # with actual link to Oyewale Oyedokun's IMDb profile -->
+        <a href="https://m.imdb.com/name/nm17607125/" class="social-link-item" target="_blank" rel="noopener">IMDb</a>
+        <!-- Comment: Replace # with actual link to Oyewale Oyedokun's TikTok profile -->
+        <a href="https://www.tiktok.com/@oyewaleoyedokun" class="social-link-item" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+          <div class="footer-brand">OYEWALE OYEDOKUN LOOKMAN</div>
+          <p class="m-0">&copy; 2026 Oyewale Oyedokun Lookman. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-center align-items-md-end">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-social-icons">
+            <a href="https://www.instagram.com/oyewale_oyedokun_" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://m.imdb.com/name/nm17607125/" target="_blank" rel="noopener" aria-label="IMDb"><i class="bi bi-film"></i></a>
+            <a href="https://www.tiktok.com/@oyewaleoyedokun" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scroll Reveal JS -->
+  <script>
+    function initScrollReveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -50px 0px"
+      });
+      
+      reveals.forEach(reveal => {
+        observer.observe(reveal);
+      });
+    }
+  </script>
+</body>
+</html>
