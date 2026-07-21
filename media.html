@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media & Reel | Oyewale Oyedokun Lookman</title>
-  <meta name="description" content="Watch the dramatic performance showreel and selected scene clips of actor Oyewale Oyedokun Lookman.">
-  
+  <meta name="description"
+    content="Watch the dramatic performance showreel and selected scene clips of actor Oyewale Oyedokun Lookman.">
+
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
 
   <!-- Custom Design Language Styles -->
   <style>
@@ -34,11 +38,18 @@
       color: var(--text-dark);
       font-family: var(--font-sans);
       overflow-x: hidden;
-      padding-top: 72px; /* Navbar height compensation */
+      padding-top: 72px;
+      /* Navbar height compensation */
       line-height: 1.7;
     }
 
-    h1, h2, h3, h4, h5, h6, .display-font {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .display-font {
       font-family: var(--font-serif);
       font-weight: 500;
       color: var(--text-dark);
@@ -78,6 +89,7 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn-gold:hover {
       background-color: transparent;
       color: var(--accent-gold);
@@ -92,6 +104,7 @@
       padding: 1.2rem 0;
       transition: all 0.3s ease;
     }
+
     .navbar-custom .navbar-brand {
       font-family: var(--font-serif);
       font-weight: 700;
@@ -99,6 +112,7 @@
       color: var(--text-dark);
       letter-spacing: 0.1em;
     }
+
     .navbar-custom .nav-link {
       font-family: var(--font-sans);
       font-size: 0.8rem;
@@ -111,10 +125,12 @@
       position: relative;
       padding: 0.5rem 0;
     }
-    .navbar-custom .nav-link:hover, 
+
+    .navbar-custom .nav-link:hover,
     .navbar-custom .nav-link.active {
       color: var(--text-dark);
     }
+
     .navbar-custom .nav-link::after {
       content: '';
       position: absolute;
@@ -125,6 +141,7 @@
       background-color: var(--accent-gold);
       transition: width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
     }
+
     .navbar-custom .nav-link:hover::after,
     .navbar-custom .nav-link.active::after {
       width: 100%;
@@ -134,6 +151,7 @@
     .section-padding {
       padding: 7rem 0;
     }
+
     @media (max-width: 768px) {
       .section-padding {
         padding: 5rem 0;
@@ -145,6 +163,7 @@
       max-width: 960px;
       margin: 0 auto;
     }
+
     .video-player-placeholder {
       position: relative;
       background-color: #181919;
@@ -153,6 +172,7 @@
       cursor: pointer;
       border: 1px solid var(--border-light);
     }
+
     .video-player-placeholder img {
       width: 100%;
       height: 100%;
@@ -160,10 +180,12 @@
       opacity: 0.65;
       transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
     }
+
     .video-player-placeholder:hover img {
       transform: scale(1.02);
       opacity: 0.75;
     }
+
     .play-icon-overlay {
       position: absolute;
       top: 50%;
@@ -178,11 +200,13 @@
       justify-content: center;
       align-items: center;
       font-size: 2.2rem;
-      padding-left: 5px; /* offset play icon for optical centering */
+      padding-left: 5px;
+      /* offset play icon for optical centering */
       transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
       z-index: 3;
     }
+
     .video-player-placeholder:hover .play-icon-overlay {
       background-color: var(--accent-gold);
       color: #fff;
@@ -195,6 +219,7 @@
       background: transparent;
       margin-bottom: 2.5rem;
     }
+
     .video-card .thumbnail-wrapper {
       position: relative;
       overflow: hidden;
@@ -202,6 +227,7 @@
       margin-bottom: 1.25rem;
       aspect-ratio: 16 / 9;
     }
+
     .video-card img {
       width: 100%;
       height: 100%;
@@ -209,9 +235,11 @@
       transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
       display: block;
     }
+
     .video-card:hover img {
       transform: scale(1.04);
     }
+
     .video-player-placeholder video,
     .thumbnail-wrapper video {
       width: 100%;
@@ -219,6 +247,7 @@
       object-fit: cover;
       display: block;
     }
+
     .video-card .duration-badge {
       position: absolute;
       bottom: 12px;
@@ -232,6 +261,7 @@
       letter-spacing: 0.05em;
       z-index: 2;
     }
+
     .video-card .play-mini-overlay {
       position: absolute;
       top: 50%;
@@ -251,11 +281,13 @@
       transition: all 0.35s ease;
       z-index: 3;
     }
+
     .video-card:hover .play-mini-overlay {
       opacity: 1;
       background-color: var(--accent-gold);
       color: #fff;
     }
+
     .video-card .card-category {
       font-family: var(--font-sans);
       font-size: 0.75rem;
@@ -265,6 +297,7 @@
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
+
     .video-card .card-title {
       font-family: var(--font-serif);
       font-size: 1.45rem;
@@ -272,6 +305,7 @@
       font-weight: 500;
       margin-bottom: 0.4rem;
     }
+
     .video-card .card-description {
       color: var(--text-secondary);
       font-size: 0.9rem;
@@ -284,6 +318,7 @@
       border-top: 1px solid var(--border-light);
       border-bottom: 1px solid var(--border-light);
     }
+
     .cta-panel h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
@@ -295,6 +330,7 @@
       color: rgba(252, 249, 246, 0.5);
       padding: 6rem 0 3.5rem;
     }
+
     .footer-custom .footer-brand {
       font-family: var(--font-serif);
       font-size: 1.6rem;
@@ -303,18 +339,22 @@
       letter-spacing: 0.05em;
       margin-bottom: 1.5rem;
     }
+
     .footer-custom p {
       color: rgba(252, 249, 246, 0.5);
       font-size: 0.9rem;
     }
+
     .footer-custom a {
       color: rgba(252, 249, 246, 0.5);
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     .footer-custom a:hover {
       color: #fcf9f6;
     }
+
     .footer-nav {
       list-style: none;
       padding: 0;
@@ -322,6 +362,7 @@
       gap: 2rem;
       margin-bottom: 2rem;
     }
+
     .footer-nav a {
       font-family: var(--font-sans);
       font-size: 0.8rem;
@@ -329,11 +370,13 @@
       letter-spacing: 0.15em;
       font-weight: 600;
     }
+
     .footer-social-icons {
       display: flex;
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
+
     .footer-social-icons a {
       font-size: 1.25rem;
       line-height: 1;
@@ -345,47 +388,63 @@
       transform: translateY(40px);
       transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-    .delay-1 { transition-delay: 0.15s; }
-    .delay-2 { transition-delay: 0.3s; }
-    .delay-3 { transition-delay: 0.45s; }
+
+    .delay-1 {
+      transition-delay: 0.15s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.3s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.45s;
+    }
 
     /* Responsive Enhancements for Mobile Devices */
     @media (max-width: 768px) {
       .navbar-custom {
         padding: 0.8rem 0;
       }
+
       .navbar-custom .navbar-brand {
         font-size: 1.05rem;
         letter-spacing: 0.05em;
       }
+
       .footer-nav {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.25rem 1rem;
       }
     }
+
     @media (max-width: 480px) {
       .navbar-custom .navbar-brand {
         font-size: 0.9rem;
         letter-spacing: 0.02em;
       }
+
       .footer-custom .footer-brand {
         font-size: 1.3rem;
       }
     }
   </style>
 </head>
+
 <body onload="initScrollReveal()">
 
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">OYEWALE OYEDOKUN LOOKMAN</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -415,7 +474,8 @@
     <div class="container text-center reveal">
       <span class="accent-eyebrow">Performance Archive</span>
       <h1 class="display-4 mb-3">Performance Reel</h1>
-      <p class="text-secondary max-width-600 mx-auto">A compilation of principal roles in dramatic film, television productions, and live theatrical works.</p>
+      <p class="text-secondary max-width-600 mx-auto">A compilation of principal roles in dramatic film, television
+        productions, and live theatrical works.</p>
     </div>
   </section>
 
@@ -429,11 +489,9 @@
           2. YouTube Video: Set data-video-src="YOUTUBE_VIDEO_ID" and set data-video-type="youtube"
           3. Vimeo Video: Set data-video-src="VIMEO_VIDEO_ID" and set data-video-type="vimeo"
         -->
-        <div class="video-player-placeholder" 
-             data-video-src="videos/oyewale_oyedokun_reel.mp4" 
-             data-video-type="local" 
-             data-video-poster="https://placehold.co/1920x1080/1c1c1a/fcf9f6?text=Performance+Reel+Poster"
-             onclick="loadAndPlayVideo(this)">
+        <div class="video-player-placeholder" data-video-src="videos/oyewale_oyedokun_reel.mp4" data-video-type="local"
+          data-video-poster="https://placehold.co/1920x1080/1c1c1a/fcf9f6?text=Performance+Reel+Poster"
+          onclick="loadAndPlayVideo(this)">
           <img src="https://placehold.co/1920x1080/1c1c1a/fcf9f6?text=Performance+Reel" alt="Showreel Poster">
           <div class="play-icon-overlay" aria-label="Play Video">
             <i class="bi bi-play-fill"></i>
@@ -455,83 +513,74 @@
         <!-- Clip 1 -->
         <div class="col-md-4 reveal">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/heartbreakmonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
-              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Heartbreak+Monologue" alt="Heartbreak Monologue">
+            <div class="thumbnail-wrapper" data-video-src="videos/heartbreakmonologue.mp4" data-video-type="local"
+              data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
+              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Heartbreak+Monologue"
+                alt="Heartbreak Monologue">
               <span class="duration-badge">01:45</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Dramatic / Monologue</span>
             <h3 class="card-title">Heartbreak Monologue</h3>
-            <p class="card-description">An emotionally raw, vulnerable portrayal of grief and the pain of letting go.</p>
+            <p class="card-description">An emotionally raw, vulnerable portrayal of grief and the pain of letting go.
+            </p>
           </div>
         </div>
 
         <!-- Clip 2 -->
         <div class="col-md-4 reveal delay-1">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/lifemonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
+            <div class="thumbnail-wrapper" data-video-src="videos/lifemonologue.mp4" data-video-type="local"
+              data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
               <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Life+Monologue" alt="Life Monologue">
               <span class="duration-badge">02:10</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Contemporary Drama</span>
             <h3 class="card-title">Life Monologue</h3>
-            <p class="card-description">A reflective, introspective character study exploring destiny and the weight of choice.</p>
+            <p class="card-description">A reflective, introspective character study exploring destiny and the weight of
+              choice.</p>
           </div>
         </div>
 
         <!-- Clip 3 -->
         <div class="col-md-4 reveal delay-2">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/expressiveandfunnymonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
-              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Expressive+and+funny+Monologue" alt="Expressive and funny Monologue">
+            <div class="thumbnail-wrapper" data-video-src="videos/expressiveandfunnymonologue.mp4"
+              data-video-type="local" data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
+              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Expressive+and+funny+Monologue"
+                alt="Expressive and funny Monologue">
               <span class="duration-badge">01:30</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Comedy / Monologue</span>
             <h3 class="card-title">Expressive & Funny Monologue</h3>
-            <p class="card-description">A lively and energetic comedic showcase highlighting expressive facial timing and sharp humor.</p>
+            <p class="card-description">A lively and energetic comedic showcase highlighting expressive facial timing
+              and sharp humor.</p>
           </div>
         </div>
 
         <!-- Clip 4 -->
         <div class="col-md-4 reveal">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/loverboymonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
+            <div class="thumbnail-wrapper" data-video-src="videos/loverboymonologue.mp4" data-video-type="local"
+              data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
               <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Loverboy+Monologue" alt="LoverBoy Monologue">
               <span class="duration-badge">01:55</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Romantic / Drama</span>
             <h3 class="card-title">Loverboy Monologue</h3>
-            <p class="card-description">A charismatic and intimate performance centered around romantic tension and vulnerability.</p>
+            <p class="card-description">A charismatic and intimate performance centered around romantic tension and
+              vulnerability.</p>
           </div>
         </div>
 
         <!-- Clip 5 -->
         <div class="col-md-4 reveal delay-1">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/yorubamonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
+            <div class="thumbnail-wrapper" data-video-src="videos/yorubamonologue.mp4" data-video-type="local"
+              data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
               <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Yoruba+Monologue" alt="Yoruba Monologue">
               <span class="duration-badge">02:25</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
@@ -545,18 +594,17 @@
         <!-- Clip 6 -->
         <div class="col-md-4 reveal delay-2">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/coldcharactermonologue.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="img/reel_poster.jpg"
-                 onclick="loadAndPlayVideo(this)">
-              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Cold+Character+Monologue" alt="Cold Character Monologue">
+            <div class="thumbnail-wrapper" data-video-src="videos/coldcharactermonologue.mp4" data-video-type="local"
+              data-video-poster="img/reel_poster.jpg" onclick="loadAndPlayVideo(this)">
+              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Cold+Character+Monologue"
+                alt="Cold Character Monologue">
               <span class="duration-badge">02:00</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Crime / Thriller</span>
             <h3 class="card-title">Cold Character Monologue</h3>
-            <p class="card-description">A chilling, calculated character portrayal highlighting quiet focus and underlying menace.</p>
+            <p class="card-description">A chilling, calculated character portrayal highlighting quiet focus and
+              underlying menace.</p>
           </div>
         </div>
 
@@ -576,48 +624,45 @@
         <!-- Scene Clip 1 -->
         <div class="col-md-4 reveal">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/shoyebivideo.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Shoyebi+Scene+Poster"
-                 onclick="loadAndPlayVideo(this)">
+            <div class="thumbnail-wrapper" data-video-src="videos/shoyebivideo.mp4" data-video-type="local"
+              data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Shoyebi+Scene+Poster"
+              onclick="loadAndPlayVideo(this)">
               <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Shoyebi+-+Lead+Scene" alt="Shoyebi Lead Scene">
               <span class="duration-badge">00:57</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">Feature Film / Drama</span>
             <h3 class="card-title">Shoyebi (Lead Scene)</h3>
-            <p class="card-description">Oyewale Oyedokun Lookman delivers a powerful lead performance in a dramatic conflict sequence.</p>
+            <p class="card-description">Oyewale Oyedokun Lookman delivers a powerful lead performance in a dramatic
+              conflict sequence.</p>
           </div>
         </div>
 
         <!-- Scene Clip 2 -->
         <div class="col-md-4 reveal delay-1">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/threads.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Threads+Scene+Poster"
-                 onclick="loadAndPlayVideo(this)">
+            <div class="thumbnail-wrapper" data-video-src="videos/threads.mp4" data-video-type="local"
+              data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Threads+Scene+Poster"
+              onclick="loadAndPlayVideo(this)">
               <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=Threads+Scene" alt="Threads Scene">
               <span class="duration-badge">00:38</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
             <span class="card-category">TV Series / Suspense</span>
             <h3 class="card-title">Threads (Supporting Scene)</h3>
-            <p class="card-description">A high-stakes scene from the television series, showcasing dramatic tension and psychological depth.</p>
+            <p class="card-description">A high-stakes scene from the television series, showcasing dramatic tension and
+              psychological depth.</p>
           </div>
         </div>
 
         <!-- Scene Clip 3 -->
         <div class="col-md-4 reveal delay-2">
           <div class="video-card">
-            <div class="thumbnail-wrapper" 
-                 data-video-src="videos/beloved_husband_clip.mp4" 
-                 data-video-type="local" 
-                 data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=My+Beloved+Husband+Poster"
-                 onclick="loadAndPlayVideo(this)">
-              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=My+Beloved+Husband" alt="My Beloved Husband Scene">
+            <div class="thumbnail-wrapper" data-video-src="videos/beloved_husband_clip.mp4" data-video-type="local"
+              data-video-poster="https://placehold.co/600x338/1c1c1a/fcf9f6?text=My+Beloved+Husband+Poster"
+              onclick="loadAndPlayVideo(this)">
+              <img src="https://placehold.co/600x338/1c1c1a/fcf9f6?text=My+Beloved+Husband"
+                alt="My Beloved Husband Scene">
               <span class="duration-badge">02:15</span>
               <div class="play-mini-overlay"><i class="bi bi-play-fill"></i></div>
             </div>
@@ -630,12 +675,24 @@
     </div>
   </section>
 
+  <!-- Client-Added Reels Section -->
+  <section class="section-padding border-bottom border-light">
+    <div class="container">
+      <div class="mb-5 reveal">
+        <span class="accent-eyebrow">Latest Additions</span>
+        <h2 class="display-6">Reels</h2>
+      </div>
+      <div class="row" id="mediaGrid"></div>
+    </div>
+  </section>
+
   <!-- Bottom CTA: Request Custom Reel -->
   <section class="section-padding cta-panel text-center">
     <div class="container reveal">
       <span class="accent-eyebrow">Custom Casting</span>
       <h2>Request Custom Reel</h2>
-      <p class="max-width-600 mx-auto mb-4 text-secondary">If you require specific scenes, classical monologue compilations, or thematic cuts tailored for your casting profile, please contact representation.</p>
+      <p class="max-width-600 mx-auto mb-4 text-secondary">If you require specific scenes, classical monologue
+        compilations, or thematic cuts tailored for your casting profile, please contact representation.</p>
       <a href="contact.html" class="btn-gold">Contact Agent</a>
     </div>
   </section>
@@ -646,7 +703,7 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
           <div class="footer-brand">OYEWALE OYEDOKUN LOOKMAN</div>
-          <p class="m-0">&copy; 2026 Oyewale Oyedokun Lookman. All rights reserved.</p>
+         <p class="m-0"><a href="admin.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.6" onmouseout="this.style.opacity=1">&copy;</a> 2026 Oyewale Oyedokun Lookman. All rights reserved.</p>
         </div>
         <div class="col-md-6 d-flex flex-column align-items-center align-items-md-end">
           <ul class="footer-nav">
@@ -657,9 +714,12 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="footer-social-icons">
-            <a href="https://www.instagram.com/oyewale_oyedokun_" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://m.imdb.com/name/nm17607125/" target="_blank" rel="noopener" aria-label="IMDb"><i class="bi bi-film"></i></a>
-            <a href="https://www.tiktok.com/@oyewaleoyedokun" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.instagram.com/oyewale_oyedokun_" target="_blank" rel="noopener"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://m.imdb.com/name/nm17607125/" target="_blank" rel="noopener" aria-label="IMDb"><i
+                class="bi bi-film"></i></a>
+            <a href="https://www.tiktok.com/@oyewaleoyedokun" target="_blank" rel="noopener" aria-label="TikTok"><i
+                class="bi bi-tiktok"></i></a>
           </div>
         </div>
       </div>
@@ -669,56 +729,97 @@
   <!-- Bootstrap 5 Bundle JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom Scroll Reveal & Video Loader JS -->
-  <script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+    import {
+      getFirestore, collection, getDocs, orderBy, query
+    } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPkUhkBu4vAaQSvg3zKSEzT2oie8WEivY",
+      authDomain: "actor-portfolio.firebaseapp.com",
+      projectId: "actor-portfolio",
+      storageBucket: "actor-portfolio.firebasestorage.app",
+      messagingSenderId: "958206353188",
+      appId: "1:958206353188:web:8f69589e732044cbb89db1"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const reelsRef = collection(db, "reels");
+
+    async function renderReels() {
+      const grid = document.getElementById('mediaGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const q = query(reelsRef, orderBy("createdAt", "desc"));
+      const snapshot = await getDocs(q);
+
+      if (snapshot.empty) {
+        grid.innerHTML = '<p class="text-secondary">No reels added yet.</p>';
+        return;
+      }
+
+      snapshot.forEach(docSnap => {
+        const reel = docSnap.data();
+        grid.innerHTML += `
+      <div class="col-md-4 reveal active">
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <video controls class="w-100 h-100" style="object-fit:cover;">
+              <source src="${reel.url}" type="video/mp4">
+            </video>
+          </div>
+          ${reel.category ? `<span class="card-category">${reel.category}</span>` : ''}
+          ${reel.title ? `<h3 class="card-title">${reel.title}</h3>` : ''}
+          ${reel.description ? `<p class="card-description">${reel.description}</p>` : ''}
+        </div>
+      </div>
+    `;
+      });
+    }
+    window.addEventListener('DOMContentLoaded', renderReels);
+
     function initScrollReveal() {
       const reveals = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
+          if (entry.isIntersecting) entry.target.classList.add('active');
         });
-      }, {
-        threshold: 0.05,
-        rootMargin: "0px 0px -50px 0px"
-      });
-      
-      reveals.forEach(reveal => {
-        observer.observe(reveal);
-      });
+      }, { threshold: 0.05, rootMargin: "0px 0px -50px 0px" });
+      reveals.forEach(reveal => observer.observe(reveal));
     }
+    window.initScrollReveal = initScrollReveal;
 
-    /*
-      Dynamic Video Loader & Player:
-      Loads native local video, YouTube, or Vimeo player on demand.
-    */
     function loadAndPlayVideo(element) {
       const src = element.getAttribute('data-video-src');
       const type = element.getAttribute('data-video-type') || 'local';
       const poster = element.getAttribute('data-video-poster') || '';
-      
+
       if (!src || src.startsWith('#') || src.includes('YOUR_VIDEO_ID')) {
         alert('Please configure the data-video-src attribute in the HTML code to view this video.');
         return;
       }
-      
+
       let html = '';
       if (type === 'local') {
         html = `<video controls autoplay class="w-100 h-100" style="object-fit: cover;" poster="${poster}">
-                  <source src="${src}" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>`;
+                <source src="${src}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>`;
       } else if (type === 'youtube') {
         html = `<iframe class="w-100 h-100" src="https://www.youtube.com/embed/${src}?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       } else if (type === 'vimeo') {
         html = `<iframe class="w-100 h-100" src="https://player.vimeo.com/video/${src}?autoplay=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
       }
-      
+
       element.innerHTML = html;
-      element.removeAttribute('onclick'); // prevent clicks from bubbling and re-triggering
+      element.removeAttribute('onclick');
       element.style.cursor = 'default';
     }
+    window.loadAndPlayVideo = loadAndPlayVideo;
   </script>
 </body>
+
 </html>
