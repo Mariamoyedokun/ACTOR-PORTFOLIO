@@ -20,11 +20,11 @@
   <!-- Custom Design Language Styles -->
   <style>
     :root {
-      --bg-color: #fcf9f6;
-      --text-dark: #1c1c1a;
-      --text-secondary: #444748;
+      --bg-color: #051F20;
+      --text-dark: #DAF1DE;
+      --text-secondary: #8EB69B;
       --accent-gold: #775a19;
-      --border-light: rgba(28, 28, 26, 0.08);
+      --border-light: rgba(218, 241, 222, 0.08);
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'DM Sans', sans-serif;
     }
@@ -101,7 +101,7 @@
 
     /* Nav bar styles */
     .navbar-custom {
-      background-color: rgba(252, 249, 246, 0.96);
+      background-color: #0B2B26;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-light);
       padding: 1.2rem 0;
@@ -268,7 +268,7 @@
     .contact-social-footer {
       border-top: 1px solid var(--border-light);
       padding: 5rem 0;
-      background-color: #f6f0ea;
+      background-color: #0B2B26;
     }
     .social-links-row {
       display: flex;
@@ -289,9 +289,17 @@
       color: var(--accent-gold);
     }
 
+    .contact-info-link {
+      color: var(--text-dark);
+      transition: color 0.3s ease;
+    }
+    .contact-info-link:hover {
+      color: var(--accent-gold);
+    }
+
     /* Footer styling */
     .footer-custom {
-      background-color: #181919;
+      background-color: #0B2B26;
       color: rgba(252, 249, 246, 0.5);
       padding: 6rem 0 3.5rem;
     }
@@ -434,13 +442,13 @@
       <div class="col-md-4 col-sm-6">
         <div class="p-4 border border-light h-100">
           <span class="accent-eyebrow d-block mb-2">Email</span>
-          <p class="m-0 font-serif fs-5"><a href="mailto:oyewaleoyedokun981@gmail.com" class="text-decoration-none text-dark">oyewaleoyedokun981@gmail.com</a></p>
+          <p class="m-0 font-serif fs-5"><a href="mailto:oyewaleoyedokun981@gmail.com" class="text-decoration-none contact-info-link">oyewaleoyedokun981@gmail.com</a></p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6">
         <div class="p-4 border border-light h-100">
           <span class="accent-eyebrow d-block mb-2">Phone</span>
-          <p class="m-0 font-serif fs-5"><a href="tel:08053665774" class="text-decoration-none text-dark">08053665774</a></p>
+          <p class="m-0 font-serif fs-5"><a href="tel:08053665774" class="text-decoration-none contact-info-link">08053665774</a></p>
         </div>
       </div>
     </div>

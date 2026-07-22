@@ -20,11 +20,11 @@
   <!-- Custom Design Language Styles -->
   <style>
     :root {
-      --bg-color: #fcf9f6;
-      --text-dark: #1c1c1a;
-      --text-secondary: #444748;
+      --bg-color: #051F20;
+      --text-dark: #DAF1DE;
+      --text-secondary: #8EB69B;
       --accent-gold: #775a19;
-      --border-light: rgba(28, 28, 26, 0.08);
+      --border-light: rgba(218, 241, 222, 0.08);
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'DM Sans', sans-serif;
     }
@@ -86,7 +86,7 @@
 
     /* Nav bar styles */
     .navbar-custom {
-      background-color: rgba(252, 249, 246, 0.96);
+      background-color: #0B2B26;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-light);
       padding: 1.2rem 0;
@@ -157,6 +157,7 @@
       width: 100%;
       color: var(--text-dark);
       margin-top: 1.5rem;
+      background-color: transparent !important;
     }
     .table-custom th {
       font-family: var(--font-sans);
@@ -167,24 +168,41 @@
       color: var(--accent-gold);
       border-bottom: 2px solid var(--accent-gold);
       padding: 1.2rem 1rem;
+      background-color: rgba(218, 241, 222, 0.06) !important;
+    }
+    .table-responsive, .table-custom {
+      background-color: transparent !important;
+    }
+    .table-custom td,
+    .table-custom th {
+      background-color: rgba(218, 241, 222, 0.04) !important;
+      color: var(--text-dark) !important;
     }
     .table-custom td {
       font-family: var(--font-sans);
       font-size: 0.95rem;
       padding: 1.2rem 1rem;
-      border-bottom: 1px solid var(--border-light);
+      border-bottom: 1px solid rgba(218, 241, 222, 0.12);
     }
     .table-custom tbody tr {
       transition: background-color 0.3s ease;
+      background-color: transparent !important;
     }
     .table-custom tbody tr:hover {
-      background-color: rgba(119, 90, 25, 0.03);
+      background-color: rgba(218, 241, 222, 0.1) !important;
     }
     .table-custom td .title-highlight {
       font-family: var(--font-serif);
       font-size: 1.1rem;
       font-weight: 500;
-      color: var(--text-dark);
+      color: var(--text-dark) !important;
+    }
+    .fw-semibold.text-dark {
+      color: var(--text-dark) !important;
+    }
+
+    .palette-panel {
+      background-color: rgba(218, 241, 222, 0.06) !important;
     }
 
     /* Skill and attributes styling */
@@ -205,6 +223,11 @@
       background-color: var(--accent-gold);
       color: #fcf9f6;
     }
+
+    .bg-light-subtle {
+      background-color: rgba(218, 241, 222, 0.06) !important;
+    }
+
     .letter-spacing-1 {
       letter-spacing: 0.1em;
     }
@@ -214,7 +237,7 @@
 
     /* Footer styling */
     .footer-custom {
-      background-color: #181919;
+      background-color: #0B2B26;
       color: rgba(252, 249, 246, 0.5);
       padding: 6rem 0 3.5rem;
     }
@@ -498,7 +521,7 @@
         <div class="col-lg-6 reveal">
           <span class="accent-eyebrow">Physical Profile</span>
           <h3 class="h4 mb-4">Attributes</h3>
-          <div class="border border-light p-4 bg-light-subtle">
+          <div class="border border-light p-4 palette-panel">
             <div class="row g-3">
               <div class="col-md-6 col-6">
                 <span class="text-secondary d-block fs-7 text-uppercase letter-spacing-1 mb-1">Gender</span>
@@ -528,7 +551,7 @@
         <div class="col-lg-6 reveal delay-1">
           <span class="accent-eyebrow">Competencies</span>
           <h3 class="h4 mb-4">Special Skills</h3>
-          <div class="border border-light p-4 bg-light-subtle h-100">
+          <div class="border border-light p-4 palette-panel h-100">
             <div class="d-flex flex-wrap gap-2">
               <span class="skill-badge">Voice-Over Narration</span>
               <span class="skill-badge">Yoruba (Oyo)</span>

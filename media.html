@@ -24,11 +24,11 @@
   <!-- Custom Design Language Styles -->
   <style>
     :root {
-      --bg-color: #fcf9f6;
-      --text-dark: #1c1c1a;
-      --text-secondary: #444748;
+      --bg-color: #051F20;
+      --text-dark: #DAF1DE;
+      --text-secondary: #8EB69B;
       --accent-gold: #775a19;
-      --border-light: rgba(28, 28, 26, 0.08);
+      --border-light: rgba(218, 241, 222, 0.08);
       --font-serif: 'Playfair Display', serif;
       --font-sans: 'DM Sans', sans-serif;
     }
@@ -98,7 +98,7 @@
 
     /* Nav bar styles */
     .navbar-custom {
-      background-color: rgba(252, 249, 246, 0.96);
+      background-color: #0B2B26;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-light);
       padding: 1.2rem 0;
@@ -204,8 +204,8 @@
       transform: translate(-50%, -50%);
       width: 90px;
       height: 90px;
-      background-color: rgba(252, 249, 246, 0.95);
-      color: var(--text-dark);
+      background-color: rgba(142, 182, 155, 0.16);
+      color: var(--bg-color);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -280,8 +280,8 @@
       transform: translate(-50%, -50%);
       width: 50px;
       height: 50px;
-      background-color: rgba(252, 249, 246, 0.95);
-      color: var(--text-dark);
+      background-color: rgba(142, 182, 155, 0.16);
+      color: var(--bg-color);
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -325,7 +325,7 @@
 
     /* Custom Reel CTA Section */
     .cta-panel {
-      background-color: #f6f0ea;
+      background-color: rgba(218, 241, 222, 0.08);
       border-top: 1px solid var(--border-light);
       border-bottom: 1px solid var(--border-light);
     }
@@ -337,7 +337,7 @@
 
     /* Footer styling */
     .footer-custom {
-      background-color: #181919;
+      background-color: #0B2B26;
       color: rgba(252, 249, 246, 0.5);
       padding: 6rem 0 3.5rem;
     }
@@ -364,6 +364,10 @@
 
     .footer-custom a:hover {
       color: #fcf9f6;
+    }
+
+    .dark-panel {
+      background-color: rgba(218, 241, 222, 0.06);
     }
 
     .footer-nav {
@@ -490,30 +494,8 @@
     </div>
   </section>
 
-  <!-- Large Video Player Placeholder -->
-  <section class="pb-5">
-    <div class="container">
-      <div class="video-player-container reveal">
-        <!-- 
-          To embed your performance reel:
-          1. Local Video File: Set data-video-src="videos/oyewale_oyedokun_reel.mp4" and set data-video-type="local"
-          2. YouTube Video: Set data-video-src="YOUTUBE_VIDEO_ID" and set data-video-type="youtube"
-          3. Vimeo Video: Set data-video-src="VIMEO_VIDEO_ID" and set data-video-type="vimeo"
-        -->
-        <div class="video-player-placeholder" data-video-src="videos/oyewale_oyedokun_reel.mp4" data-video-type="local"
-          data-video-poster="https://placehold.co/1920x1080/1c1c1a/fcf9f6?text=Performance+Reel+Poster"
-          onclick="loadAndPlayVideo(this)">
-          <img src="https://placehold.co/1920x1080/1c1c1a/fcf9f6?text=Performance+Reel" alt="Showreel Poster">
-          <div class="play-icon-overlay" aria-label="Play Video">
-            <i class="bi bi-play-fill"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Monologues Section -->
-  <section class="section-padding bg-light border-top border-bottom border-light">
+  <section class="section-padding dark-panel border-top border-bottom border-light">
     <div class="container">
       <div class="mb-5 reveal">
         <span class="accent-eyebrow">Solo Performances</span>
