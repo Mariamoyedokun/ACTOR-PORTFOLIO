@@ -152,12 +152,21 @@
     }
 
     /* Table custom styles */
+    .table-responsive,
+    .table.table-custom,
+    .table.table-custom thead,
+    .table.table-custom tbody,
+    .table.table-custom tr,
+    .table.table-custom th,
+    .table.table-custom td {
+      background-color: transparent !important;
+      color: var(--text-dark) !important;
+    }
     .table-custom {
       border-collapse: collapse;
       width: 100%;
       color: var(--text-dark);
       margin-top: 1.5rem;
-      background-color: transparent !important;
     }
     .table-custom th {
       font-family: var(--font-sans);
@@ -168,28 +177,21 @@
       color: var(--accent-gold);
       border-bottom: 2px solid var(--accent-gold);
       padding: 1.2rem 1rem;
-      background-color: rgba(218, 241, 222, 0.06) !important;
-    }
-    .table-responsive, .table-custom {
-      background-color: transparent !important;
-    }
-    .table-custom td,
-    .table-custom th {
-      background-color: rgba(218, 241, 222, 0.04) !important;
-      color: var(--text-dark) !important;
+      background-color: rgba(218, 241, 222, 0.08) !important;
     }
     .table-custom td {
       font-family: var(--font-sans);
       font-size: 0.95rem;
       padding: 1.2rem 1rem;
       border-bottom: 1px solid rgba(218, 241, 222, 0.12);
+      background-color: rgba(218, 241, 222, 0.04) !important;
     }
     .table-custom tbody tr {
       transition: background-color 0.3s ease;
       background-color: transparent !important;
     }
     .table-custom tbody tr:hover {
-      background-color: rgba(218, 241, 222, 0.1) !important;
+      background-color: rgba(218, 241, 222, 0.12) !important;
     }
     .table-custom td .title-highlight {
       font-family: var(--font-serif);
