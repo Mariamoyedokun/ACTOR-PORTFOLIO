@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Oyewale Oyedokun Lookman</title>
-  <meta name="description" content="Explore the theatrical performances and film roles of Oyewale Oyedokun Lookman in this photo and production archive.">
+  <title>Blog | Oyewale Oyedokun Lookman</title>
+  <meta name="description" content="Read stories, career updates, and behind-the-scenes reflections from Oyewale Oyedokun Lookman.">
   
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -151,78 +151,74 @@
       }
     }
 
-    /* Portfolio Cards & Grid */
-    .portfolio-card {
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1.8rem;
+    /* Blog post cards */
+    .post-card {
       background-color: #1c1c1a;
-      border: none;
+      border: 1px solid rgba(218, 241, 222, 0.1);
       border-radius: 0;
+      overflow: hidden;
+      transition: transform 0.3s ease;
       cursor: pointer;
     }
-    .portfolio-card.aspect-portrait {
-      aspect-ratio: 3 / 4;
+    .post-card:hover {
+      transform: translateY(-6px);
     }
-    .portfolio-card.aspect-widescreen {
-      aspect-ratio: 16 / 9;
-    }
-    .portfolio-card.aspect-square {
-      aspect-ratio: 1 / 1;
-    }
-    .portfolio-card img {
+    .post-card img {
       width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
       display: block;
-      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    .portfolio-card:hover img {
-      transform: scale(1.04);
-    }
-    .portfolio-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(28, 28, 26, 0.92);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .post-card-body {
       padding: 2rem;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      z-index: 2;
     }
-    .portfolio-card:hover .portfolio-overlay {
-      opacity: 1;
-    }
-    .portfolio-overlay .project-title {
-      color: #fcf9f6;
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      transform: translateY(15px);
-      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .portfolio-overlay .project-meta {
+    .post-card-category {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       color: var(--accent-gold);
+      font-weight: 700;
+    }
+    .post-card-title {
+      font-family: var(--font-serif);
+      color: #fcf9f6;
+      margin-bottom: 1rem;
+      font-size: 1.55rem;
+    }
+    .post-card-excerpt,
+    .post-card-full {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .post-card-full {
+      display: none;
+    }
+    .post-card.expanded .post-card-full {
+      display: block;
+    }
+    .post-card.expanded .post-card-excerpt {
+      display: none;
+    }
+    .post-card-toggle {
+      background: transparent;
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 0.9rem 1.4rem;
       font-family: var(--font-sans);
       font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
       font-weight: 700;
-      transform: translateY(15px);
-      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-      transition-delay: 0.05s;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: all 0.3s ease;
     }
-    .portfolio-card:hover .project-title,
-    .portfolio-card:hover .project-meta {
-      transform: translateY(0);
+    .post-card-toggle:hover {
+      background-color: var(--accent-gold);
+      color: #051F20;
     }
 
     /* Footer styling */
@@ -330,7 +326,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="portfolio.html">Portfolio</a>
+            <a class="nav-link active" href="portfolio.html">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="resume.html">Resume</a>
@@ -346,112 +342,105 @@
     </div>
   </nav>
 
-  <!-- Portfolio Header Section -->
+  <!-- Blog Header Section -->
   <section class="section-padding pb-4">
     <div class="container text-center reveal">
-      <span class="accent-eyebrow">Work Archive</span>
-      <h1 class="display-4 mb-3">Portfolio Gallery.</h1>
-      <p class="text-secondary max-width-600 mx-auto">A retrospective collection of dramatic stage productions and cinematic performances across classic text and modern realism.</p>
+      <span class="accent-eyebrow">Actor Journal</span>
+      <h1 class="display-4 mb-3">Stories from the stage and screen.</h1>
+      <p class="text-secondary max-width-600 mx-auto">Narratives, career reflections, and behind-the-scenes updates from Oyewale Oyedokun Lookman.</p>
     </div>
   </section>
 
-  <!-- Gallery Grid Section (Mix of aspect ratios) -->
+  <!-- Blog Post Grid Section -->
   <section class="pb-5">
     <div class="container">
-      <div class="row">
-        <!-- Project 1: Portrait Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal">
-          <div class="portfolio-card aspect-portrait">
-            <!-- Comment: Replace the placeholder image below with a production photo from Shoyebi -->
-            <img src="Images/shoyebi.jpeg" alt="Shoyebi">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Shoyebi</h3>
-              <p class="project-meta">2025 / Feature Film / Lead</p>
-            </div>
-          </div>
-        </div>
+      <div id="postGrid" class="row g-4"></div>
 
-        <!-- Project 2: Widescreen Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal delay-1">
-          <div class="portfolio-card aspect-widescreen">
-            <!-- Comment: Replace the placeholder image below with a production still from My Beloved Husband -->
-            <img src="https://placehold.co/800x450/1c1c1a/fcf9f6?text=My+Beloved+Husband" alt="My Beloved Husband">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">My Beloved Husband</h3>
-              <p class="project-meta">2025 / Feature Film / Supporting</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Square Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal delay-2">
-          <div class="portfolio-card aspect-square">
-            <!-- Comment: Replace the placeholder image below with a production photo from Threads -->
-            <img src="https://placehold.co/600x600/1c1c1a/fcf9f6?text=Threads" alt="Threads">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Threads</h3>
-              <p class="project-meta">Current / TV Series / Supporting</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Widescreen Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal">
-          <div class="portfolio-card aspect-widescreen">
-            <!-- Comment: Replace the placeholder image below with a production still from Ajihun -->
-            <img src="https://placehold.co/800x450/1c1c1a/fcf9f6?text=Ajihun" alt="Ajihun">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Ajihun</h3>
-              <p class="project-meta">2023 / Feature Film / Supporting</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: Portrait Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal delay-1">
-          <div class="portfolio-card aspect-portrait">
-            <!-- Comment: Replace the placeholder image below with a production photo from Bashorun Gaa -->
-            <img src="https://placehold.co/600x800/1c1c1a/fcf9f6?text=Bashorun+Gaa" alt="Bashorun Gaa">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Bashorun Gaa</h3>
-              <p class="project-meta">2024 / Theater / Alaafin Abiodun</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Square Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal delay-2">
-          <div class="portfolio-card aspect-square">
-            <!-- Comment: Replace the placeholder image below with a production photo from Attahairu -->
-            <img src="https://placehold.co/600x600/1c1c1a/fcf9f6?text=Attahairu" alt="Attahairu">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Attahairu</h3>
-              <p class="project-meta">2024 / Theater / Prince</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7: Widescreen Aspect Ratio -->
-        <div class="col-lg-4 col-md-6 reveal">
-          <div class="portfolio-card aspect-widescreen">
-            <!-- Comment: Replace the placeholder image below with a production photo from Opakan Rebirth -->
-            <img src="https://placehold.co/800x450/1c1c1a/fcf9f6?text=Opakan+Rebirth" alt="Opakan Rebirth">
-            <div class="portfolio-overlay">
-              <h3 class="project-title">Opakan Rebirth</h3>
-              <p class="project-meta">2022 / TV Series / Extra</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom CTA: Request Full Lookbook -->
       <div class="row mt-5">
         <div class="col-12 text-center reveal">
-          <button type="button" class="btn-gold" onclick="alert('Thank you for your interest. The full lookbook has been requested and will be sent shortly.')">Request Full Lookbook</button>
+          <button type="button" class="btn-gold" onclick="alert('Thank you — new stories will be shared here as they are published.')">Stay tuned for more stories</button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Blog Post Scripts -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      getDocs,
+      query,
+      orderBy
+    } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAPkUhkBu4vAaQSvg3zKSEzT2oie8WEivY",
+      authDomain: "actor-portfolio.firebaseapp.com",
+      projectId: "actor-portfolio",
+      storageBucket: "actor-portfolio.firebasestorage.app",
+      messagingSenderId: "958206353188",
+      appId: "1:958206353188:web:8f69589e732044cbb89db1"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const postsRef = collection(db, 'posts');
+
+    function escapeHtml(str) {
+      return str ? str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)) : '';
+    }
+
+    function abbreviatedContent(content) {
+      if (!content) return '';
+      return content.length > 150 ? `${content.slice(0, 150).trim()}…` : content;
+    }
+
+    window.togglePost = function (event, postId) {
+      const card = document.getElementById(postId);
+      card.classList.toggle('expanded');
+      const button = card.querySelector('.post-card-toggle');
+      button.textContent = card.classList.contains('expanded') ? 'Read less' : 'Read more';
+    };
+
+    async function renderPosts() {
+      const grid = document.getElementById('postGrid');
+      grid.innerHTML = '';
+
+      const q = query(postsRef, orderBy('createdAt', 'desc'));
+      const snapshot = await getDocs(q);
+
+      if (snapshot.empty) {
+        grid.innerHTML = '<div class="col-12 text-center reveal active"><p class="text-secondary">No stories yet — check back soon.</p></div>';
+        return;
+      }
+
+      snapshot.forEach(docSnap => {
+        const post = docSnap.data();
+        const id = docSnap.id;
+        const card = document.createElement('div');
+        card.className = 'col-lg-6 col-12 reveal';
+        card.innerHTML = `
+          <div class="post-card" id="${id}">
+            ${post.coverImage ? `<img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(post.title)} cover">` : ''}
+            <div class="post-card-body">
+              ${post.category ? `<div class="post-card-category">${escapeHtml(post.category)}</div>` : ''}
+              <h3 class="post-card-title">${escapeHtml(post.title)}</h3>
+              <p class="post-card-excerpt">${escapeHtml(abbreviatedContent(post.content))}</p>
+              <p class="post-card-full">${escapeHtml(post.content)}</p>
+              <button type="button" class="post-card-toggle" onclick="togglePost(event, '${id}')">Read more</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      initScrollReveal();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderPosts);
+  </script>
 
   <!-- Footer -->
   <footer class="footer-custom">
@@ -459,12 +448,12 @@
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
           <div class="footer-brand">OYEWALE OYEDOKUN LOOKMAN</div>
-          <p class="m-0">&copy; 2026 Oyewale Oyedokun Lookman. All rights reserved.</p>
+          <p class="m-0"><a href="admin.html" style="color: inherit; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.6" onmouseout="this.style.opacity=1">&copy;</a> <span id="year"></span> Oyewale Oyedokun Lookman. All rights reserved.</p>
         </div>
         <div class="col-md-6 d-flex flex-column align-items-center align-items-md-end">
           <ul class="footer-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="media.html">Media</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -501,6 +490,8 @@
         observer.observe(reveal);
       });
     }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
